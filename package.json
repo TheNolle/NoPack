@@ -1,12 +1,15 @@
 {
-  "name": "electron-x-react",
+  "name": "nopack",
   "version": "0.0.1",
   "main": "electron-main.js",
   "scripts": {
     "start": "pnpm build && electron .",
     "dev": "cross-env NODE_ENV=development concurrently --kill-others-on-fail \"pnpm build\" \"webpack serve --config webpack.config.js --mode development --port 45678\" \"wait-on http://localhost:45678 && electron .\"",
     "build": "webpack --config webpack.config.js --mode production",
-    "package": "pnpm build && electron-builder"
+    "package": "pnpm build && electron-builder",
+    "install-packages": "pnpm i",
+    "reinstall-packages": "rm -rf node_modules && pnpm i",
+    "update-packages": "pnpm update"
   },
   "build": {
     "appId": "com.thenolle.app.nopack",
