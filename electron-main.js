@@ -7,8 +7,8 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         minWidth: 1024,
         width: 1024,
-        minHeight: 668,
-        height: 668,
+        minHeight: 600,
+        height: 600,
         icon: path.join(__dirname, './public/favicon.ico'),
         webPreferences: {
             contextIsolation: true,
