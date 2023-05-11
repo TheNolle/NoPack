@@ -1,5 +1,11 @@
 const { contextBridge, ipcRenderer } = require('electron')
 
-contextBridge.exposeInMainWorld('electron', {
-    consoleLog: (message) => ipcRenderer.send('console-log', message),
+contextBridge.exposeInMainWorld('versions', {
+    node: () => process.versions.node,
+    chrome: () => process.versions.chrome,
+    electron: () => process.versions.electron,
+})
+
+contextBridge.exposeInMainWorld('shell', {
+    openExternal: (url) => ipcRenderer.send('open-external', url),
 })

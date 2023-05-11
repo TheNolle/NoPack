@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { Buffer } from 'buffer'
 
 import './index.scss'
+import './static/scss/colors.scss'
+import './static/scss/scrollbar.scss'
 
 import App from './App'
 

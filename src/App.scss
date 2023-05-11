@@ -1,0 +1,9 @@
+.app-container {
+    height: 100vh;
+    color: white;
+    background-color: var(--color-dark);
+
+    > :nth-child(2) {
+        padding-left: 5.5rem;
+    }
+}

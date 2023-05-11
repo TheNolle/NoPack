@@ -44,6 +44,10 @@ const plugins = [
                 from: './public/favicon.ico',
                 to: 'favicon.ico',
             },
+            {
+                from: './public/font-awesome.js',
+                to: 'font-awesome.js',
+            },
         ],
     }),
 ]

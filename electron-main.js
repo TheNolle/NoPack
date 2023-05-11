@@ -5,19 +5,20 @@ let mainWindow
 
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
+        minWidth: 1024,
+        width: 1024,
+        minHeight: 668,
+        height: 668,
         icon: path.join(__dirname, './public/favicon.ico'),
-        autoHideMenuBar: true,
         webPreferences: {
-            nodeIntegration: false,
             contextIsolation: true,
-            enableRemoteModule: false,
             preload: path.join(__dirname, 'electron-preloader.js')
         },
     })
 
-    console.log(process.env.NODE_ENV);
+    process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true'
+    mainWindow.setMenuBarVisibility(false)
+
     if (process.env.NODE_ENV === 'development') mainWindow.loadURL('http://localhost:45678/')
     else mainWindow.loadFile(path.join(__dirname, './dist/index.html'))
 }
@@ -30,4 +31,6 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', () => { if (process.platform !== 'darwin') app.quit() })
 
-ipcMain.on('console-log', (event, message) => console.log(message))
+
+
+ipcMain.on('open-external', (event, url) => require('electron').shell.openExternal(url))
