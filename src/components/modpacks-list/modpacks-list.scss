@@ -2,4 +2,10 @@
     width: 180px;
     height: 100vh;
     position: relative;
+    display: grid;
+    grid-template-rows: 30px calc(100% - 30px - 45px) 45px;
+
+    .hidden {
+        display: none;
+    }
 }

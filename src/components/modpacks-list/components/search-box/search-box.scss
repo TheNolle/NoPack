@@ -1,0 +1,22 @@
+.search-box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-not-quite-black);
+    padding: 0.25rem;
+
+    input {
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        padding: 0.25rem;
+        color: var(--color-white);
+        background-color: var(--color-grey-dark);
+        transition: all 200ms;
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--color-fantastic-green);
+        }
+    }
+}

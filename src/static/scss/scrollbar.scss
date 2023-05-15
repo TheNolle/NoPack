@@ -1,3 +1,18 @@
 ::-webkit-scrollbar {
     display: none;
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    background-color: var(--color-grey-dark);
+    transition: background-color 1500ms;
+
+    &:hover {
+        background-color: var(--color-blurple);
+    }
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-grey-dark);
 }

@@ -25,10 +25,10 @@ export default function Sidebar() {
                 <Divider />
                 <Squircle iconType="solid" iconName="gear" text="Settings" callback={toggleActive} />
                 <Divider />
-                <Squircle color="fantastic-green" iconType="solid" iconName="globe" text="My Website" callback={() => window.shell.openExternal('https://thenolle.com')} />
-                <Squircle color="fantastic-green" iconType="brands" iconName="discord" text="Discord Server" callback={() => window.shell.openExternal('https://discord.com/invite/86yVsMVN9z')} />
-                <Squircle color="fantastic-green" iconType="brands" iconName="github-alt" text="My Github" callback={() => window.shell.openExternal('https://github.com/TheNolle')} />
-                <Squircle color="fantastic-green" iconType="brands" iconName="github" text="App's Repository" callback={() => window.shell.openExternal('https://github.com/TheNolle/NoPack')} />
+                <Squircle color="fantastic-green" iconType="solid" iconName="globe" text="Website" callback={() => window.shell.openExternal('https://thenolle.com')} />
+                <Squircle color="fantastic-green" iconType="brands" iconName="discord" text="Discord" callback={() => window.shell.openExternal('https://discord.com/invite/86yVsMVN9z')} />
+                <Squircle color="fantastic-green" iconType="brands" iconName="github-alt" text="Github" callback={() => window.shell.openExternal('https://github.com/TheNolle')} />
+                <Squircle color="fantastic-green" iconType="brands" iconName="github" text="Repository" callback={() => window.shell.openExternal('https://github.com/TheNolle/NoPack')} />
             </ul>
         </nav>
     )
