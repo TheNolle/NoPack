@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from 'react'
 
+import mdpcks from '../../modpacks.json'
+
 import './modpacks-list.scss'
 
 import SearchBox from './components/search-box/search-box'
 import List from './components/list/list'
 import User from './components/user/user'
 
-export default function ModpacksList() {
+export default function ModpacksList({ callback }) {
     const [modpacks, setModpacks] = useState([])
     const [loading, setLoading] = useState(true)
 
+    useEffect(() => {
+        getModpacks()
+            .then((modpacks) => setModpacks(modpacks))
+            .then(() => setLoading(false))
+            .catch((err) => console.error(err))
+    }, [])
+
     async function getModpacks() {
-        const result = await window.modpacks.getAll()
-        console.log(result)
-        return result
+        return mdpcks
     }
 
     function filter(text) {
@@ -33,16 +40,10 @@ export default function ModpacksList() {
         })
     }
 
-    useEffect(() => {
-        getModpacks()
-            .then(modpacks => setModpacks(modpacks))
-            .then(() => setLoading(false))
-    }, [])
-
     return (
         <div className="modpacks-list-container">
             <SearchBox callback={(text) => filter(text)} />
-            <List modpacks={modpacks} loading={loading} />
+            <List modpacks={modpacks} loading={loading} callback={(id) => callback(modpacks.find(modpack => modpack.id === id))} />
             <User username="_Nolly" />
         </div>
     )

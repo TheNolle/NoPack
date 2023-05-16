@@ -1,0 +1,38 @@
+[
+    {
+        "id": "84a57555-7645-4de9-821f-1ef9b6211d64",
+        "name": "SkyFactory 4",
+        "description": "Offering a brand-new experience never before seen in the series. Full automation, tech, magic, and bacon resources! This iteration offers over 30+ world types so you can play the pack like never before! While some world types are based on the classic tree on dirt others are designed with unique recipes and advancements.",
+        "version": "4.1.0",
+        "banner": "https://pbs.twimg.com/media/D4PC8lxX4AAkYGK.png",
+        "loader": "Forge",
+        "icon": "https://media.forgecdn.net/avatars/199/573/636907930795697123.png"
+    },
+    {
+        "id": "b2f8a3e3-8f2d-4b7a-87b1-4d1f1e1e7f3b",
+        "name": "Continuum",
+        "description": "Introducing new, never before used mods to make things even more difficult and challenging. The overall goal of this pack is to extend game play buy making large changes to progression though out the mods. The overall goal of this pack is to extend game play buy making large changes to progression though out the mods.",
+        "version": "1.3.0",
+        "banner": "https://i.ytimg.com/vi/E86Elkc8hds/maxresdefault.jpg",
+        "loader": "Forge",
+        "icon": "https://media.forgecdn.net/avatars/153/547/636619228771834618.png"
+    },
+    {
+        "id": "3e77cec2-7ee3-43a8-a637-09d1f962fb0f",
+        "name": "Omnifactory",
+        "description": "An extremely tech focused expert pack centered around Gregtech Community Edition. After around 5 months of development, it is finally time to release it to the public.",
+        "version": "1.2.0",
+        "banner": "https://mtxserv.com/uploads/cover/omnifactory-minecraft-a38aee378f1cfcdb6bcc792080595bc2.jpg",
+        "loader": "Forge",
+        "icon": "https://media.forgecdn.net/avatars/198/486/636900272840730252.jpeg"
+    },
+    {
+        "id": "d9b2f4e2-4e0e-4f4d-9d4c-9b8b0d4f4b9c",
+        "name": "Enigmatica 2: Expert",
+        "description": "An expert questing modpack for Minecraft 1.12 with over 650 quests to guide you along the way.",
+        "version": "1.75",
+        "banner": "https://i.imgur.com/2LZKl8L_d.png?maxwidth=3840&fidelity=grand",
+        "loader": "Forge",
+        "icon": "https://media.forgecdn.net/avatars/287/344/637307898262282482.jpeg"
+    }
+]

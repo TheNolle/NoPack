@@ -5,12 +5,8 @@
 
 ::-webkit-scrollbar-thumb {
     width: 100%;
-    background-color: var(--color-grey-dark);
+    background-color: var(--color-blurple);
     transition: background-color 1500ms;
-
-    &:hover {
-        background-color: var(--color-blurple);
-    }
 }
 
 ::-webkit-scrollbar-track {

@@ -13,7 +13,8 @@ const moduleRules = {
         { test: /\.css$/i, use: [loader, 'css-loader'] },
         { test: /\.s[ac]ss$/i, use: [loader, 'css-loader', 'sass-loader'] },
         { test: /\.(png|svg|jpg|jpeg|gif)$/i, type: 'asset/resource' },
-        { test: /\.pdf$/, use: [{ loader: 'file-loader', options: { name: '[path][name].[ext]' } }] }
+        { test: /\.pdf$/, use: [{ loader: 'file-loader', options: { name: '[path][name].[ext]' } }] },
+        { test: /\.md$/, use: 'raw-loader' }
     ],
 }
 

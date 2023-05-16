@@ -1,0 +1,134 @@
+.modpack-content-container {
+    width: calc(100% - 5.73rem);
+    height: 100vh;
+    box-shadow: inset 0 0 0.1rem var(--color-actually-black);
+
+    .content {
+        max-height: calc(100% - 45px);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: block;
+        }
+
+        .banner {
+            width: 100%;
+            height: 20rem;
+            background-color: var(--color-actually-black);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            .overlay {
+                width: inherit;
+                height: inherit;
+                background-color: var(--color-actually-black);
+                opacity: 0.5;
+                filter: blur(0.75rem);
+                position: absolute;
+            }
+
+            h1 {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2.5rem;
+                text-align: center;
+                color: var(--color-full-white);
+                text-shadow: 0 0 0.5rem var(--color-actually-black);
+            }
+
+            p {
+                position: absolute;
+                bottom: 0;
+                padding: 1rem;
+                width: 100%;
+                text-align: center;
+                color: var(--color-grey-white);
+                background: linear-gradient(transparent, var(--color-actually-black));
+            }
+
+            img {
+                width: inherit;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .markdown-body {
+        padding-bottom: 1rem;
+
+        .no-readme {
+            text-align: center;
+            padding-top: 5rem;
+            font-size: xx-large;
+            font-weight: bolder;
+            text-shadow: 0 0 0.5rem var(--color-actually-black);
+        }
+    }
+
+    footer {
+        z-index: 1;
+        position: sticky;
+        bottom: 0;
+        height: 45px;
+        background-color: var(--color-blurple);
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        .infos {
+            display: flex;
+            place-items: center;
+            column-gap: 0.5rem;
+            padding-left: 0.25rem;
+
+            .icon {
+                width: 3rem;
+                height: 3rem;
+
+                img {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                font-size: 0.75rem;
+                text-shadow: 0 0 0.5rem var(--color-actually-black);
+
+                .name,
+                .version,
+                .loader {
+                    display: flex;
+                    column-gap: 0.25rem;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 0.5rem;
+            padding-right: 0.25rem;
+
+            button {
+                cursor: pointer;
+                border: none;
+                border-radius: 0.25rem;
+                padding: 0.5rem 1rem;
+                background-color: var(--color-lighter-dark);
+                color: var(--color-full-white);
+                transition: background-color 250ms;
+
+                &:hover {
+                    background-color: var(--color-fantastic-green);
+                }
+            }
+        }
+    }
+}
