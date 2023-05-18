@@ -4,6 +4,7 @@
 	bottom: 0;
 	overflow-y: scroll;
 	width: 100%;
+    z-index: 1;
 
     .squircles {
         box-shadow: inset 0 0 0.1rem 0 var(--color-actually-black);

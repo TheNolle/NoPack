@@ -1,0 +1,124 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.modal-content {
+    background-color: var(--color-dark);
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    color: var(--color-full-white);
+    user-select: none;
+
+    .modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        button.close-button {
+            background: none;
+            border: none;
+            color: var(--color-grey-white);
+            font-size: 24px;
+            cursor: pointer;
+            transition: color 250ms;
+
+            &:hover,
+            &:focus {
+                color: var(--color-blurple);
+            }
+        }
+    }
+
+    .modal-body {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        code {
+            background-color: var(--color-grey-dark);
+            padding: 2px 4px;
+            border-radius: 3px;
+            box-shadow: 0 0.1rem 0.2rem var(--color-actually-black);
+        }
+
+        input {
+            background-color: var(--color-grey-dark);
+            border: none;
+            border-radius: 3px;
+            margin-top: 10px;
+            padding: 2px 4px;
+            box-shadow: 0 0.1rem 0.2rem var(--color-actually-black);
+            color: var(--color-full-white);
+            font-size: 16px;
+            line-height: 1.5;
+            width: 100%;
+
+            &:focus {
+                box-shadow: 0 0 0 2px var(--color-blurple);
+            }
+        }
+
+        .error-message {
+            color: red;
+        }
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        column-gap: 10px;
+
+        button {
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 250ms;
+
+            &.cancel-button {
+                background-color: var(--color-grey-dark);
+                color: var(--color-full-white);
+
+                &:hover,
+                &:focus {
+                    background-color: var(--color-not-quite-black);
+                }
+            }
+
+            &.confirm-button {
+                background-color: var(--color-fantastic-green);
+                color: var(--color-full-white);
+
+                &:hover,
+                &:focus {
+                    background-color: var(--color-blurple);
+                }
+            }
+        }
+    }
+}

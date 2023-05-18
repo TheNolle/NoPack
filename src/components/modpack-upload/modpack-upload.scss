@@ -1,0 +1,89 @@
+.modpack-upload-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+
+    .modpack-upload {
+        position: relative;
+        background-color: var(--color-dark);
+        border-radius: 8px;
+        padding: 20px;
+        max-width: 600px;
+        width: 90%;
+        height: auto;
+        min-height: 100px;
+        margin: auto 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        color: var(--color-full-white);
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            cursor: pointer;
+
+            p,
+            svg {
+                color: var(--color-fantastic-green);
+            }
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            input[type="url"] {
+                background-color: var(--color-grey-dark);
+                border: none;
+                border-radius: 3px;
+                margin-top: 10px;
+                padding: 2px 4px;
+                box-shadow: 0 0.1rem 0.2rem var(--color-actually-black);
+                color: var(--color-full-white);
+                font-size: 16px;
+                line-height: 1.5;
+                width: 100%;
+
+                &:focus {
+                    box-shadow: 0 0 0 2px var(--color-blurple);
+                }
+            }
+
+            button {
+                border: none;
+                border-radius: 3px;
+                padding: 5px 10px;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background-color 250ms;
+                margin-top: 10px;
+                background-color: var(--color-fantastic-green);
+                color: var(--color-full-white);
+
+                &:hover,
+                &:focus {
+                    background-color: var(--color-blurple);
+                }
+            }
+        }
+    }
+}

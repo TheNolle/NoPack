@@ -6,6 +6,7 @@ import { Buffer } from 'buffer'
 import './index.scss'
 import './static/scss/colors.scss'
 import './static/scss/scrollbar.scss'
+import './static/scss/modals.scss'
 
 import App from './App'
 

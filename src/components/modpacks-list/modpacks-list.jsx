@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import mdpcks from '../../modpacks.json'
+import mdpcks from '../../static/temp/modpacks.json'
 
 import './modpacks-list.scss'
 
